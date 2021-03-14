@@ -14,3 +14,7 @@ Warning message when no criteria have been selected<br />
 <br />
 The generated password, this one has all 4 char sets in it<br />
 ![Result](screenshots/result.jpg)<br />
+
+### Resources used
+
+[This guy's question]{https://stackoverflow.com/questions/1497481/javascript-password-generator}
