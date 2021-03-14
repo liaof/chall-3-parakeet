@@ -10,7 +10,7 @@ var password = "";
 function writePassword() {
   //instead of immediately generating a password, we need to set it's criteria so it 
   //makes sense to seperate the two distinct stages into their own functions
-  var password = passwordCriteria();
+  password = passwordCriteria();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -40,12 +40,15 @@ function passwordCriteria(){
 }
 
 function generatePassword (passwordLength, lowercase, uppercase, numeric, specialChar){
+  //seperate the different char sets into an array so we can piece them together as needed below
     var charsets = ["abcdefghijklmnopqrstuvwxyz",
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                     "0123456789",
                     "!@#$%^&*()_+{}|:<>?:'-="
                   ]
     var chosenCharSet = "";
+    //resets the password so we don't simply append the new one on the old one
+    password = "";
     //let 1010 indicate lowercase on, uppercase off, numeric on, special char off
     
     //0001
